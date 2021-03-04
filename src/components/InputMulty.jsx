@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 const InputM = (props) => {
   const [multy, setMulty] = useState(0);
 
-  //   useEffect(() => {
-  //     props.Multyply(multy);
-  //   }, [multy]);
+  useEffect(() => {
+    console.log(multy);
+  });
 
   return (
     <input
@@ -20,4 +20,4 @@ const InputM = (props) => {
   );
 };
 
-export default connect((state) => ({}))(InputM);
+export default InputM;

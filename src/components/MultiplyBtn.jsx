@@ -7,14 +7,15 @@ const btnMulti = (props) => {
       className="btn btn-primary"
       onClick={() => {
         console.log(props);
-        // props.Multiply();
+        props.Multiply();
       }}
     >
       {props.name}
     </button>
   );
 };
+// export default btnMulti;
 
 export default connect(null, (dispatch) => ({
-  //   Multiply: () => dispatch({ type: 'multyVal' }),
+  Multiply: () => dispatch({ type: 'multyVal', multy: 9 }),
 }))(btnMulti);

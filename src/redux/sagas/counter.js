@@ -45,7 +45,10 @@ function* changeV(action) {
 function* multy(action) {
   try {
     console.log('Multiply value: ', action);
-    yield put({ type: 'MULTY_VAL.SUCCESS', ...action });
+    yield put({
+      type: 'MULTY_VAL.SUCCESS',
+      multy: action.multy,
+    });
   } catch (e) {
     yield put({ type: 'ERROR', message: e.message });
     console.log('ERROR: ', e);
